@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageView"
+        tools:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mvTitle"
+        style="@style/Widget.TextView.Custom"
+        tools:text="Movie Name - X"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:fontFamily="serif"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movieOverview"
+        style="@style/Widget.TextView.Custom1"
+        tools:text="Movie Description - full lenght movie description"
+        android:layout_below="@+id/mvTitle"
+        android:layout_toEndOf="@+id/imageView"
+        android:textStyle="normal|italic"
+
+        android:textAlignment="textStart"
+         />
+</RelativeLayout>
