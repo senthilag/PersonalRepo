@@ -12,7 +12,8 @@
         android:layout_alignParentLeft="true"
         android:adjustViewBounds="true"
         android:id="@+id/imageView"
-        tools:src="@mipmap/ic_launcher"/>
+        tools:src="@mipmap/ic_launcher"
+        android:fadingEdge="horizontal|vertical" />
 
     <TextView
         android:layout_width="wrap_content"
