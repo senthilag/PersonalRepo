@@ -1,10 +1,13 @@
 package com.codepath.flixter;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -52,6 +55,24 @@ public class MovieActivity extends AppCompatActivity {
                 android.R.color.holo_orange_light,
 
                 android.R.color.holo_red_light);
+        setupclickListener();
+    }
+
+    private void setupclickListener() {
+        lsView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
+                        Intent i = new Intent(getApplicationContext(), ExposeDetails.class);
+
+                        i.putExtra("title",movies.get(pos).getOrginalTitle());
+                        i.putExtra("overview",movies.get(pos).getOverView());
+                        i.putExtra("vote_average",movies.get(pos).getRating());
+                        i.putExtra("backdrop_path",movies.get(pos).getBackdropPath());
+                        startActivity(i);
+                    }
+                }
+        );
     }
 
     public void fetchTimelineAsync(int page) {

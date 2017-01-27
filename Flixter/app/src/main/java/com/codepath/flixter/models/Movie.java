@@ -16,6 +16,7 @@ public class Movie {
     String overView;
     String rating;
     String backdropPath;
+    String id;
 
     public Movie(JSONObject jsonObject) throws JSONException {
         this.posterPath = jsonObject.getString("poster_path");
@@ -23,6 +24,7 @@ public class Movie {
         this.overView = jsonObject.getString("overview");
         this.rating = jsonObject.getString("vote_average");
         this.backdropPath = jsonObject.getString("backdrop_path");
+        this.id = jsonObject.getString("id");
     }
 
     public static ArrayList<Movie> getJsonAr(JSONArray jsonArray) {
@@ -60,5 +62,9 @@ public class Movie {
         } else {
             return 0;
         }
+    }
+
+    public String getId() {
+        return id;
     }
 }
