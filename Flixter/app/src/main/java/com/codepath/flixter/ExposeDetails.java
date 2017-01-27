@@ -3,6 +3,7 @@ package com.codepath.flixter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -11,7 +12,13 @@ import com.squareup.picasso.Picasso;
  * Created by senthilg on 1/26/17.
  */
 
-public class ExposeDetails extends AppCompatActivity {
+public class ExposeDetails extends AppCompatActivity  {
+
+    RatingBar getRatingBar;
+    RatingBar setRatingBar;
+    TextView countText;
+    int count;
+    float curRate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +38,11 @@ public class ExposeDetails extends AppCompatActivity {
         TextView textView1 = (TextView) findViewById(R.id.movieOverview);
         textView1.setText(overview);
 
+        Float curRate = Float.parseFloat(getIntent().getStringExtra("vote_average"));
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        ratingBar.setRating(curRate);
+
     }
+
+
 }

@@ -44,7 +44,7 @@ public class MovieActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 fetchTimelineAsync(0)
-;            }
+                ;            }
         });
         // Configure the refreshing colors
 
@@ -67,7 +67,7 @@ public class MovieActivity extends AppCompatActivity {
 
                         i.putExtra("title",movies.get(pos).getOrginalTitle());
                         i.putExtra("overview",movies.get(pos).getOverView());
-                        i.putExtra("vote_average",movies.get(pos).getRating());
+                        i.putExtra("vote_average",movies.get(pos).getVoteRating());
                         i.putExtra("backdrop_path",movies.get(pos).getBackdropPath());
                         startActivity(i);
                     }

@@ -55,16 +55,14 @@ public class Movie {
     public String getOverView() {
         return overView;
     }
-
+    public String getVoteRating() {
+        return rating;
+    }
     public int getRating() {
         if ((Double.parseDouble(rating)) > 6.0) {
             return 1;
         } else {
             return 0;
         }
-    }
-
-    public String getId() {
-        return id;
     }
 }

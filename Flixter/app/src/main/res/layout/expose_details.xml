@@ -9,15 +9,13 @@
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:id="@+id/mvTitle"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:fontFamily="sans-serif"
         android:textSize="24sp"
         android:textColor="@android:color/background_light"
-        android:layout_alignParentTop="true"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp" />
+        android:layout_alignParentTop="true" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -28,12 +26,18 @@
         android:layout_below="@+id/mvTitle"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="TextView"
+    <RatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:numStars="10"
+    />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/movieOverview"
-        android:paddingTop="20dp"
         android:textColor="@android:color/background_light" />
 
 

@@ -51,7 +51,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
                 viewHolder.imgView = (ImageView) convertView.findViewById(R.id.imageView1);
                 Picasso.with(getContext()).load(movie.getBackdropPath()).into(viewHolder.imgView);
             } else {
-           // convertView = getInflatedLayoutForType(type,parent);
+                // convertView = getInflatedLayoutForType(type,parent);
                 convertView = inflater.inflate(R.layout.movieitem, parent, false);
                 viewHolder.imgView = (ImageView) convertView.findViewById(R.id.imageView);
                 viewHolder.title = (TextView) convertView.findViewById(R.id.mvTitle);
@@ -69,13 +69,10 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
 
         /*ImageView imgView = (ImageView) convertView.findViewById(R.id.imageView);
         imgView.setImageResource(0);
-
         TextView title = (TextView) convertView.findViewById(R.id.mvTitle);
         TextView overview = (TextView) convertView.findViewById(R.id.movieOverview);
-
         title.setText(movie.getOrginalTitle());
         overview.setText(movie.getOverView());
-
         Picasso.with(getContext()).load(movie.getPosterPath()).into(imgView);*/
 
 
